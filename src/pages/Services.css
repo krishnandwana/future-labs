@@ -13,7 +13,7 @@
 }
 
 .service-detail-card {
-  background: white;
+  background: #111827;
   transition: all 0.3s ease;
 }
 
@@ -23,24 +23,24 @@
 
 .service-icon-large {
   font-size: 3.5rem;
-  color: #667eea;
+  color: #6366F1;
   margin-bottom: 20px;
 }
 
 .service-detail-card h3 {
   font-size: 1.6rem;
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 15px;
 }
 
 .service-description {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
   margin-bottom: 25px;
 }
 
 .service-features h4 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 15px;
   font-size: 1.1rem;
 }
@@ -51,7 +51,7 @@
 }
 
 .service-features li {
-  color: #666;
+  color: #9CA3AF;
   padding: 8px 0;
   padding-left: 25px;
   position: relative;
@@ -61,13 +61,13 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #22D3EE;
   font-weight: bold;
 }
 
 /* Process Section */
 .process-section {
-  background: #f8f9fa;
+  background: #111827;
 }
 
 .process-grid {
@@ -78,23 +78,23 @@
 }
 
 .process-step {
-  background: white;
+  background: #0B0F19;
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .process-step:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
 }
 
 .step-number {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -106,20 +106,20 @@
 }
 
 .process-step h4 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
 
 .process-step p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.6;
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #E5E7EB;
   padding: 80px 0;
 }
 

@@ -3,8 +3,8 @@
 }
 
 .page-hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #E5E7EB;
   padding: 100px 0 60px;
   text-align: center;
 }
@@ -33,47 +33,47 @@
 }
 
 .story-text p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: 1.05rem;
 }
 
 .placeholder-image {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
   border-radius: 10px;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #666;
+  color: #9CA3AF;
   font-size: 1.2rem;
 }
 
 /* Mission & Vision */
 .mission-vision {
-  background: #f8f9fa;
+  background: #111827;
 }
 
 .mv-card {
-  background: white;
-  border-left: 4px solid #667eea;
+  background: #0B0F19;
+  border-left: 4px solid #6366F1;
 }
 
 .mv-card h3 {
-  color: #667eea;
+  color: #6366F1;
   margin-bottom: 20px;
   font-size: 1.8rem;
 }
 
 .mv-card p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
 }
 
 /* Values Section */
 .values-section {
-  background: white;
+  background: #0B0F19;
 }
 
 .value-card {
@@ -82,39 +82,39 @@
 
 .value-icon {
   font-size: 3rem;
-  color: #667eea;
+  color: #6366F1;
   margin-bottom: 20px;
 }
 
 .value-card h3 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 15px;
 }
 
 .value-card p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.6;
 }
 
 /* Why Choose Us */
 .why-choose {
-  background: #f8f9fa;
+  background: #111827;
 }
 
 .why-choose .card h4 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
 
 .why-choose .card p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.7;
 }
 
 /* Location Section */
 .location-section {
-  background: white;
+  background: #0B0F19;
 }
 
 .location-content {
@@ -124,7 +124,7 @@
 }
 
 .location-content p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
   font-size: 1.1rem;
 }

@@ -1,6 +1,6 @@
 .header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: #111827;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -15,7 +15,7 @@
 
 .logo h1 {
   font-size: 1.8rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -28,7 +28,7 @@
 }
 
 .nav-link {
-  color: #333;
+  color: #E5E7EB;
   font-weight: 500;
   font-size: 1rem;
   transition: color 0.3s ease;
@@ -42,7 +42,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #6366F1;
   transition: width 0.3s ease;
 }
 
@@ -51,11 +51,11 @@
 }
 
 .nav-link:hover {
-  color: #667eea;
+  color: #22D3EE;
 }
 
 .nav-link-cta {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4F46E5;
   color: white !important;
   padding: 10px 25px;
   border-radius: 5px;
@@ -68,14 +68,14 @@
 
 .nav-link-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.5);
 }
 
 .hamburger {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: #333;
+  color: #E5E7EB;
 }
 
 @media (max-width: 968px) {
@@ -88,11 +88,11 @@
     left: -100%;
     top: 70px;
     flex-direction: column;
-    background-color: white;
+    background-color: #111827;
     width: 100%;
     text-align: center;
     transition: left 0.3s ease;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.5);
     padding: 2rem 0;
     gap: 1.5rem;
   }

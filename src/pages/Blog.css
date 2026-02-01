@@ -13,18 +13,18 @@
   max-width: 500px;
   margin: 0 auto 30px;
   padding: 15px 20px;
-  background: white;
-  border: 2px solid #e0e0e0;
+  background: #111827;
+  border: 2px solid #1F2937;
   border-radius: 10px;
   transition: border-color 0.3s ease;
 }
 
 .search-box:focus-within {
-  border-color: #667eea;
+  border-color: #6366F1;
 }
 
 .search-box svg {
-  color: #666;
+  color: #9CA3AF;
   font-size: 1.2rem;
 }
 
@@ -33,6 +33,8 @@
   border: none;
   outline: none;
   font-size: 1rem;
+  background: transparent;
+  color: #E5E7EB;
 }
 
 .category-filter {
@@ -44,21 +46,21 @@
 
 .category-btn {
   padding: 10px 20px;
-  background: white;
-  border: 2px solid #e0e0e0;
+  background: #111827;
+  border: 2px solid #1F2937;
   border-radius: 25px;
-  color: #666;
+  color: #9CA3AF;
   font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .category-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #6366F1;
+  color: #22D3EE;
 }
 
 .category-btn.active {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   color: white;
   border-color: transparent;
 }
@@ -72,7 +74,7 @@
 }
 
 .blog-card {
-  background: white;
+  background: #111827;
   overflow: hidden;
   padding: 0;
   transition: all 0.3s ease;
@@ -80,11 +82,11 @@
 
 .blog-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
 }
 
 .blog-image .placeholder-image {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   height: 220px;
   display: flex;
   align-items: center;
@@ -107,8 +109,8 @@
 
 .blog-category {
   display: inline-block;
-  background: #f0f0f0;
-  color: #667eea;
+  background: #1F2937;
+  color: #22D3EE;
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.85rem;
@@ -116,19 +118,19 @@
 }
 
 .read-time {
-  color: #999;
+  color: #6B7280;
   font-size: 0.85rem;
 }
 
 .blog-title {
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
 .blog-excerpt {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -138,7 +140,7 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 15px;
-  border-top: 1px solid #f0f0f0;
+  border-top: 1px solid #1F2937;
   margin-bottom: 20px;
 }
 
@@ -147,13 +149,13 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #666;
+  color: #9CA3AF;
   font-size: 0.9rem;
 }
 
 .author-icon,
 .date-icon {
-  color: #667eea;
+  color: #6366F1;
 }
 
 .read-more-btn {
@@ -161,7 +163,7 @@
   align-items: center;
   gap: 10px;
   background: transparent;
-  color: #667eea;
+  color: #22D3EE;
   font-weight: 600;
   padding: 0;
   transition: all 0.3s ease;
@@ -173,11 +175,11 @@
 
 /* Newsletter Section */
 .newsletter-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   border-radius: 15px;
   padding: 50px;
   text-align: center;
-  color: white;
+  color: #E5E7EB;
   margin-top: 60px;
 }
 
@@ -213,11 +215,11 @@
 
 .newsletter-form .btn {
   background: white;
-  color: #667eea;
+  color: #4F46E5;
 }
 
 .newsletter-form .btn:hover {
-  background: #f0f0f0;
+  background: #E5E7EB;
   transform: translateY(-2px);
 }
 

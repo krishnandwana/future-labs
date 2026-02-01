@@ -13,19 +13,19 @@
 }
 
 .portfolio-card {
-  background: white;
+  background: #111827;
   transition: all 0.3s ease;
 }
 
 .portfolio-header {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 2px solid #1F2937;
 }
 
 .project-category {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 20px;
@@ -36,18 +36,18 @@
 
 .portfolio-card h3 {
   font-size: 1.6rem;
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 10px;
 }
 
 .project-client {
-  color: #667eea;
+  color: #22D3EE;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .project-description {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
   margin-bottom: 25px;
 }
@@ -59,7 +59,7 @@
 
 .project-technologies h4,
 .project-results h4 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 12px;
   font-size: 1.05rem;
 }
@@ -71,8 +71,8 @@
 }
 
 .tech-tag {
-  background: #f0f0f0;
-  color: #333;
+  background: #1F2937;
+  color: #E5E7EB;
   padding: 6px 14px;
   border-radius: 5px;
   font-size: 0.85rem;
@@ -85,7 +85,7 @@
 }
 
 .project-results li {
-  color: #666;
+  color: #9CA3AF;
   padding: 6px 0;
   padding-left: 25px;
   position: relative;
@@ -95,15 +95,15 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #22D3EE;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
 /* Portfolio Stats */
 .portfolio-stats {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
+  background: linear-gradient(135deg, #111827 0%, #0B0F19 100%);
+  color: #E5E7EB;
 }
 
 .stats-grid {
@@ -116,19 +116,19 @@
 .stat-card {
   text-align: center;
   padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(99, 102, 241, 0.1);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(99, 102, 241, 0.15);
   transform: translateY(-5px);
 }
 
 .stat-card h3 {
   font-size: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -137,13 +137,13 @@
 
 .stat-card p {
   font-size: 1.1rem;
-  color: #b8b8b8;
+  color: #9CA3AF;
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #E5E7EB;
   padding: 80px 0;
 }
 

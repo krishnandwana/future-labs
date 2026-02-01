@@ -4,8 +4,8 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #E5E7EB;
   padding: 120px 0 80px;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+  background: linear-gradient(135deg, #22D3EE 0%, #6366F1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 
 /* About Preview */
 .about-preview {
-  background: #f8f9fa;
+  background: #0B0F19;
 }
 
 .about-grid {
@@ -77,7 +77,7 @@
 
 .about-text p {
   margin-bottom: 20px;
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.8;
 }
 
@@ -94,23 +94,23 @@
 }
 
 .feature-icon {
-  color: #667eea;
+  color: #6366F1;
   font-size: 2rem;
   flex-shrink: 0;
 }
 
 .feature-item h4 {
   margin-bottom: 5px;
-  color: #1a1a1a;
+  color: #E5E7EB;
 }
 
 .feature-item p {
-  color: #666;
+  color: #9CA3AF;
 }
 
 /* Services Section */
 .services-section {
-  background: white;
+  background: #0B0F19;
 }
 
 .service-card {
@@ -119,24 +119,24 @@
 
 .service-icon {
   font-size: 3rem;
-  color: #667eea;
+  color: #6366F1;
   margin-bottom: 20px;
 }
 
 .service-card h3 {
   margin-bottom: 15px;
-  color: #1a1a1a;
+  color: #E5E7EB;
 }
 
 .service-card p {
-  color: #666;
+  color: #9CA3AF;
   line-height: 1.6;
 }
 
 /* Stats Section */
 .stats-section {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  color: white;
+  background: linear-gradient(135deg, #111827 0%, #0B0F19 100%);
+  color: #E5E7EB;
   padding: 60px 0;
 }
 
@@ -150,7 +150,7 @@
 .stat-number {
   font-size: 3rem;
   font-weight: bold;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -159,12 +159,12 @@
 
 .stat-label {
   font-size: 1.1rem;
-  color: #b8b8b8;
+  color: #9CA3AF;
 }
 
 /* Testimonials */
 .testimonials-section {
-  background: #f8f9fa;
+  background: #111827;
 }
 
 .testimonial-card {
@@ -177,31 +177,31 @@
   top: 20px;
   left: 30px;
   font-size: 2rem;
-  color: #667eea;
+  color: #6366F1;
   opacity: 0.3;
 }
 
 .testimonial-text {
-  color: #666;
+  color: #9CA3AF;
   font-style: italic;
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
 .testimonial-author h4 {
-  color: #1a1a1a;
+  color: #E5E7EB;
   margin-bottom: 5px;
 }
 
 .testimonial-author p {
-  color: #667eea;
+  color: #22D3EE;
   font-size: 0.9rem;
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
+  color: #E5E7EB;
   padding: 80px 0;
 }
 

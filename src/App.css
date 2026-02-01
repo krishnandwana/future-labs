@@ -23,13 +23,13 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
-  color: #1a1a1a;
+  color: #E5E7EB;
 }
 
 .section-subtitle {
   font-size: 1.2rem;
   text-align: center;
-  color: #666;
+  color: #9CA3AF;
   margin-bottom: 50px;
   max-width: 700px;
   margin-left: auto;
@@ -47,24 +47,24 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4F46E5;
   color: white;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #667eea;
-  border: 2px solid #667eea;
+  color: #22D3EE;
+  border: 2px solid #22D3EE;
 }
 
 .btn-secondary:hover {
-  background: #667eea;
-  color: white;
+  background: #22D3EE;
+  color: #0B0F19;
 }
 
 /* Grid */
@@ -87,16 +87,16 @@
 
 /* Card */
 .card {
-  background: white;
+  background: #111827;
   border-radius: 10px;
   padding: 30px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
 }
 
 /* Responsive */
