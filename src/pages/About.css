@@ -1,0 +1,154 @@
+.about-page {
+  overflow-x: hidden;
+}
+
+.page-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0 60px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.page-hero p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+}
+
+/* Story Section */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-text h2 {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.story-text p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.placeholder-image {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Mission & Vision */
+.mission-vision {
+  background: #f8f9fa;
+}
+
+.mv-card {
+  background: white;
+  border-left: 4px solid #667eea;
+}
+
+.mv-card h3 {
+  color: #667eea;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.mv-card p {
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Values Section */
+.values-section {
+  background: white;
+}
+
+.value-card {
+  text-align: center;
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: #667eea;
+  margin-bottom: 20px;
+}
+
+.value-card h3 {
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.value-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: #f8f9fa;
+}
+
+.why-choose .card h4 {
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.why-choose .card p {
+  color: #666;
+  line-height: 1.7;
+}
+
+/* Location Section */
+.location-section {
+  background: white;
+}
+
+.location-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.location-content p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .page-hero p {
+    font-size: 1.1rem;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .story-text h2 {
+    text-align: center;
+  }
+
+  .placeholder-image {
+    height: 300px;
+  }
+}
