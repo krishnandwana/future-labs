@@ -10,26 +10,34 @@ const ThreeScene = ({ sceneType, isVisible }) => {
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    // Scene setup
-    const scene = new THREE.Scene();
-    sceneRef.current = scene;
+    // Check for WebGL support
+    if (!window.WebGLRenderingContext) {
+      console.warn('WebGL not supported');
+      return;
+    }
 
-    const camera = new THREE.PerspectiveCamera(
-      45,
-      canvasRef.current.clientWidth / canvasRef.current.clientHeight,
-      0.1,
-      1000
-    );
-    camera.position.z = 5;
+    let renderer;
+    try {
+      // Scene setup
+      const scene = new THREE.Scene();
+      sceneRef.current = scene;
 
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvasRef.current,
-      alpha: true,
-      antialias: true,
-    });
-    renderer.setSize(canvasRef.current.clientWidth, canvasRef.current.clientHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    rendererRef.current = renderer;
+      const camera = new THREE.PerspectiveCamera(
+        45,
+        canvasRef.current.clientWidth / canvasRef.current.clientHeight,
+        0.1,
+        1000
+      );
+      camera.position.z = 5;
+
+      renderer = new THREE.WebGLRenderer({
+        canvas: canvasRef.current,
+        alpha: true,
+        antialias: true,
+      });
+      renderer.setSize(canvasRef.current.clientWidth, canvasRef.current.clientHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      rendererRef.current = renderer;
 
     // Lighting
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -330,18 +338,25 @@ const ThreeScene = ({ sceneType, isVisible }) => {
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
       }
-      renderer.dispose();
-      scene.traverse((object) => {
-        if (object.geometry) object.geometry.dispose();
-        if (object.material) {
-          if (Array.isArray(object.material)) {
-            object.material.forEach(material => material.dispose());
-          } else {
-            object.material.dispose();
+      if (renderer) {
+        renderer.dispose();
+      }
+      if (scene) {
+        scene.traverse((object) => {
+          if (object.geometry) object.geometry.dispose();
+          if (object.material) {
+            if (Array.isArray(object.material)) {
+              object.material.forEach(material => material.dispose());
+            } else {
+              object.material.dispose();
+            }
           }
-        }
-      });
+        });
+      }
     };
+    } catch (error) {
+      console.error('ThreeScene error:', error);
+    }
   }, [sceneType]);
 
   return (
