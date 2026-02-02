@@ -106,8 +106,8 @@ function Home() {
               We specialize in developing immersive AR/VR solutions, intelligent platforms, and custom applications that transform how businesses operate and compete.
               </p>
             <div className="hero-buttons">
-              <a href="#services" className="btn btn-primary">Explore Services</a>
-              <a href="#projects" className="btn btn-secondary">View Projects</a>
+              <a href="/services" className="btn btn-primary">Explore Services</a>
+              <a href="/projects" className="btn btn-secondary">View Projects</a>
             </div>
           </div>
         </div>
