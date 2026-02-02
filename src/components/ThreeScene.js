@@ -228,7 +228,10 @@ const ThreeScene = ({ sceneType, isVisible }) => {
       targetRotationY = mouseX * 0.3;
     };
 
-    canvasRef.current.addEventListener('mousemove', onMouseMove);
+    const canvas = canvasRef.current;
+    if (canvas) {
+      canvas.addEventListener('mousemove', onMouseMove);
+    }
 
     // Animation loop
     const clock = new THREE.Clock();
@@ -294,6 +297,10 @@ const ThreeScene = ({ sceneType, isVisible }) => {
               child.position.z = Math.sin(elapsedTime + offset) * 0.3;
             }
           });
+          break;
+
+        default:
+          // No additional animation for default case
           break;
       }
 
