@@ -24,11 +24,8 @@ function Header() {
 
           <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
             <Link to="/" className="nav-link" onClick={closeMenu}>Home</Link>
-            <Link to="/about" className="nav-link" onClick={closeMenu}>About</Link>
             <Link to="/services" className="nav-link" onClick={closeMenu}>Services</Link>
-            <Link to="/portfolio" className="nav-link" onClick={closeMenu}>Portfolio</Link>
-            <Link to="/blog" className="nav-link" onClick={closeMenu}>Blog</Link>
-            <Link to="/careers" className="nav-link" onClick={closeMenu}>Careers</Link>
+            <Link to="/projects" className="nav-link" onClick={closeMenu}>Projects</Link>
             <Link to="/contact" className="nav-link nav-link-cta" onClick={closeMenu}>Contact Us</Link>
           </div>
 

@@ -1,152 +1,343 @@
-import React from 'react';
-import { FaCode, FaMobile, FaCloud, FaDatabase, FaPaintBrush, FaChartLine, FaShieldAlt, FaRobot } from 'react-icons/fa';
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ThreeScene from '../components/ThreeScene';
 import './Services.css';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Services() {
+  const heroRef = useRef(null);
+  const servicesRef = useRef([]);
+  const [activeScene, setActiveScene] = useState(null);
+
+  useEffect(() => {
+
+    // Small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      // Hero animation
+      const heroTimeline = gsap.timeline({ defaults: { ease: 'power3.out' } });
+      
+      const subtitle = document.querySelector('.hero-subtitle');
+      const words = document.querySelectorAll('.hero-title .word');
+      const description = document.querySelector('.hero-description');
+      const cta = document.querySelector('.hero-cta');
+
+      if (subtitle) {
+        heroTimeline.from(subtitle, {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+        });
+      }
+
+      if (words.length > 0) {
+        heroTimeline.from(words, {
+          opacity: 0,
+          y: 100,
+          rotateX: -90,
+          stagger: 0.1,
+          duration: 1,
+          ease: 'power4.out',
+        }, '-=0.4');
+      }
+
+      if (description) {
+        heroTimeline.from(description, {
+          opacity: 0,
+          y: 30,
+          duration: 0.8,
+        }, '-=0.5');
+      }
+
+      if (cta) {
+        heroTimeline.from(cta, {
+          opacity: 0,
+          scale: 0.9,
+          duration: 0.6,
+          ease: 'back.out(1.7)',
+        }, '-=0.3');
+      }
+
+      // Services scroll animations
+      servicesRef.current.forEach((service, index) => {
+        if (!service) return;
+
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: service,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+            onEnter: () => setActiveScene(index),
+            onEnterBack: () => setActiveScene(index),
+          },
+        });
+
+        const content = service.querySelector('.service-content');
+        const canvas = service.querySelector('.service-canvas-wrapper');
+        const features = service.querySelectorAll('.feature-item');
+
+        if (content) {
+          timeline.from(content, {
+            opacity: 0,
+            x: -100,
+            duration: 1,
+            ease: 'power3.out',
+          });
+        }
+
+        if (canvas) {
+          timeline.from(canvas, {
+            opacity: 0,
+            x: 100,
+            duration: 1,
+            ease: 'power3.out',
+          }, '-=0.8');
+        }
+
+        if (features.length > 0) {
+          timeline.from(features, {
+            opacity: 0,
+            y: 30,
+            stagger: 0.1,
+            duration: 0.6,
+            ease: 'power2.out',
+          }, '-=0.5');
+        }
+
+        // Parallax effect
+        if (canvas) {
+          gsap.to(canvas, {
+            scrollTrigger: {
+              trigger: service,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+            y: -50,
+          });
+        }
+      });
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
+
   const services = [
     {
-      icon: <FaCode />,
+      id: 'ai',
+      sceneType: 'ai',
+      title: 'AI Development',
+      subtitle: 'Artificial Intelligence & Machine Learning',
+      description: 'Harness the power of artificial intelligence to transform your business. From neural networks to natural language processing, we build intelligent systems that learn, adapt, and evolve.',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI Strategy & Consulting',
+        'Custom AI Solutions',
+      ],
+      techStack: ['PyTorch', 'TensorFlow', 'Hugging Face', 'OpenAI', 'LangChain', 'Scikit-learn'],
+      gradient: 'linear-gradient(135deg, #00d4ff 0%, #0066ff 100%)',
+    },
+    {
+      id: 'web',
+      sceneType: 'web',
       title: 'Web Development',
-      description: 'Custom web applications built with modern frameworks like React, Angular, and Vue.js. We create scalable, performant, and user-friendly solutions.',
-      features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'CMS Development']
+      subtitle: 'Modern Web Applications',
+      description: 'Create stunning, high-performance web applications that captivate users and drive results. We specialize in cutting-edge frameworks and scalable architectures.',
+      features: [
+        'React & Next.js Applications',
+        'Progressive Web Apps (PWA)',
+        'E-commerce Platforms',
+        'Real-time Applications',
+        'API Development',
+        'Cloud-Native Solutions',
+      ],
+      techStack: ['React', 'Next.js', 'Node.js', 'FastAPI', 'MongoDB', 'PostgreSQL'],
+      gradient: 'linear-gradient(135deg, #ffd700 0%, #ff8c00 100%)',
     },
     {
-      icon: <FaMobile />,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android. Delivering seamless user experiences on all devices.',
-      features: ['iOS Development', 'Android Development', 'React Native', 'Flutter Apps']
+      id: 'app',
+      sceneType: 'app',
+      title: 'App Development',
+      subtitle: 'Native & Cross-Platform Apps',
+      description: 'Build exceptional mobile experiences that users love. From iOS to Android, we deliver native performance with seamless cross-platform capabilities.',
+      features: [
+        'iOS & Android Native',
+        'React Native Development',
+        'Flutter Applications',
+        'Mobile UI/UX Design',
+        'App Store Optimization',
+        'Enterprise Mobility',
+      ],
+      techStack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'Expo'],
+      gradient: 'linear-gradient(135deg, #00d4ff 0%, #7b2cbf 100%)',
     },
     {
-      icon: <FaCloud />,
-      title: 'Cloud Solutions',
-      description: 'Cloud infrastructure design, migration, and management services. Helping businesses leverage the power of cloud computing.',
-      features: ['AWS Solutions', 'Azure Services', 'Cloud Migration', 'DevOps Implementation']
+      id: 'arvr',
+      sceneType: 'arvr',
+      title: 'AR/VR Development',
+      subtitle: 'Immersive Experiences',
+      description: 'Step into the future with immersive augmented and virtual reality solutions. We create experiences that blur the line between digital and physical worlds.',
+      features: [
+        'Virtual Reality Apps',
+        'Augmented Reality Solutions',
+        'Mixed Reality Experiences',
+        '3D Modeling & Animation',
+        'WebXR Development',
+        'Spatial Computing',
+      ],
+      techStack: ['Unity', 'Unreal Engine', 'ARKit', 'ARCore', 'WebXR', 'Three.js'],
+      gradient: 'linear-gradient(135deg, #ff00ff 0%, #00d4ff 100%)',
     },
-    {
-      icon: <FaDatabase />,
-      title: 'Data Engineering',
-      description: 'Build robust data pipelines and warehouses. Transform raw data into actionable insights for your business.',
-      features: ['Data Warehousing', 'ETL Processes', 'Big Data Solutions', 'Data Migration']
-    },
-    {
-      icon: <FaPaintBrush />,
-      title: 'UI/UX Design',
-      description: 'User-centered design that creates engaging, intuitive, and beautiful digital experiences for your customers.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Visual Design']
-    },
-    {
-      icon: <FaChartLine />,
-      title: 'Digital Marketing',
-      description: 'Comprehensive digital marketing strategies to increase your online presence and drive business growth.',
-      features: ['SEO Optimization', 'Social Media Marketing', 'Content Strategy', 'Analytics & Reporting']
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: 'Cybersecurity',
-      description: 'Protect your digital assets with comprehensive security solutions and best practices implementation.',
-      features: ['Security Audits', 'Penetration Testing', 'Compliance Management', 'Security Training']
-    },
-    {
-      icon: <FaRobot />,
-      title: 'AI & Machine Learning',
-      description: 'Leverage artificial intelligence and machine learning to automate processes and gain competitive advantages.',
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'Chatbot Development']
-    }
   ];
+
+  const splitText = (text) => {
+    return text.split(' ').map((word, index) => (
+      <span key={index} className="word" style={{ display: 'inline-block', overflow: 'hidden' }}>
+        <span style={{ display: 'inline-block' }}>{word}&nbsp;</span>
+      </span>
+    ));
+  };
 
   return (
     <div className="services-page">
       {/* Hero Section */}
-      <section className="page-hero">
-        <div className="container">
-          <h1>Our Services</h1>
-          <p>Comprehensive Technology Solutions for Modern Businesses</p>
+      <section className="services-hero" ref={heroRef}>
+        <div className="hero-background">
+          <div className="gradient-orb orb-1"></div>
+          <div className="gradient-orb orb-2"></div>
+          <div className="gradient-orb orb-3"></div>
+        </div>
+        
+        <div className="container hero-container">
+          <p className="hero-subtitle">OUR EXPERTISE</p>
+          <h1 className="hero-title">
+            {splitText('Architecting the Digital Future')}
+          </h1>
+          <p className="hero-description">
+            We blend cutting-edge technology with creative innovation to deliver 
+            transformative digital solutions that push boundaries and exceed expectations.
+          </p>
+          <button className="hero-cta magnetic-button">
+            <span className="button-text">Explore Our Services</span>
+            <span className="button-glow"></span>
+          </button>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="section">
-        <div className="container">
-          <div className="services-intro">
-            <h2 className="section-title">What We Offer</h2>
-            <p className="section-subtitle">
-              From concept to deployment, we provide end-to-end technology solutions 
-              tailored to your business needs. Our expert team delivers innovative, 
-              scalable, and reliable services.
-            </p>
-          </div>
-
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div key={index} className="card service-detail-card">
-                <div className="service-header">
-                  <div className="service-icon-large">{service.icon}</div>
-                  <h3>{service.title}</h3>
-                </div>
-                <p className="service-description">{service.description}</p>
-                <div className="service-features">
-                  <h4>Key Features:</h4>
-                  <ul>
+      {/* Services Sections */}
+      <div className="services-container">
+        {services.map((service, index) => (
+          <section
+            key={service.id}
+            className={`service-section ${index % 2 === 0 ? 'layout-left' : 'layout-right'}`}
+            ref={(el) => (servicesRef.current[index] = el)}
+          >
+            <div className="container">
+              <div className="service-grid">
+                <div className="service-content">
+                  <div className="service-header">
+                    <span 
+                      className="service-number"
+                      style={{ background: service.gradient }}
+                    >
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                    <p className="service-subtitle">{service.subtitle}</p>
+                  </div>
+                  
+                  <h2 className="service-title">{service.title}</h2>
+                  <p className="service-description">{service.description}</p>
+                  
+                  <div className="service-features">
                     {service.features.map((feature, idx) => (
-                      <li key={idx}>{feature}</li>
+                      <div key={idx} className="feature-item">
+                        <div 
+                          className="feature-dot"
+                          style={{ background: service.gradient }}
+                        ></div>
+                        <span>{feature}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
+
+                  <div className="tech-stack">
+                    <h4 className="tech-stack-title">Tech Stack</h4>
+                    <div className="tech-stack-items">
+                      {service.techStack.map((tech, idx) => (
+                        <span 
+                          key={idx} 
+                          className="tech-badge"
+                          style={{ borderColor: service.gradient.match(/#[0-9a-f]{6}/i)?.[0] || '#00d4ff' }}
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <button className="service-cta">
+                    <span>Learn More</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path 
+                        d="M5 12h14M12 5l7 7-7 7" 
+                        stroke="currentColor" 
+                        strokeWidth="2" 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className="service-canvas-wrapper">
+                  <div className="canvas-glow" style={{ background: service.gradient }}></div>
+                  <ThreeScene 
+                    sceneType={service.sceneType} 
+                    isVisible={activeScene === index}
+                  />
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="section process-section">
-        <div className="container">
-          <h2 className="section-title">Our Process</h2>
-          <p className="section-subtitle">
-            A proven methodology to deliver exceptional results
-          </p>
-          <div className="process-grid">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h4>Discovery</h4>
-              <p>Understanding your business goals, challenges, and requirements</p>
             </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h4>Planning</h4>
-              <p>Creating detailed roadmaps and technical specifications</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h4>Development</h4>
-              <p>Building solutions using agile methodologies and best practices</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h4>Testing</h4>
-              <p>Rigorous quality assurance and user acceptance testing</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">05</div>
-              <h4>Deployment</h4>
-              <p>Smooth rollout with minimal disruption to your operations</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">06</div>
-              <h4>Support</h4>
-              <p>Ongoing maintenance, updates, and technical support</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        ))}
+      </div>
 
       {/* CTA Section */}
-      <section className="section cta-section">
+      <section className="services-cta-section">
         <div className="container">
           <div className="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Let's discuss your project and how we can help</p>
-            <a href="/contact" className="btn btn-primary">Request a Quote</a>
+            <h2 className="cta-title">Ready to Transform Your Vision?</h2>
+            <p className="cta-description">
+              Let's collaborate to create something extraordinary. Our team of experts 
+              is ready to bring your ideas to life with cutting-edge technology.
+            </p>
+            <div className="cta-buttons">
+              <Link to="/contact" className="cta-primary magnetic-button">
+                <span className="button-text">Start Your Project</span>
+                <span className="button-glow"></span>
+              </Link>
+              <Link to="/projects" className="cta-secondary">
+                <span>View Portfolio</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path 
+                    d="M5 12h14M12 5l7 7-7 7" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

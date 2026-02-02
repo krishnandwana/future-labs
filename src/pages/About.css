@@ -1,12 +1,17 @@
 .about-page {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .page-hero {
-  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-  color: #E5E7EB;
+  background: linear-gradient(135deg, #15181E 0%, #0B0D10 100%);
+  color: #EDEDED;
   padding: 100px 0 60px;
   text-align: center;
+  border-bottom: 2px solid rgba(214, 255, 0, 0.2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .page-hero h1 {
@@ -33,41 +38,42 @@
 }
 
 .story-text p {
-  color: #9CA3AF;
+  color: #8B919B;
   line-height: 1.8;
   margin-bottom: 20px;
   font-size: 1.05rem;
 }
 
 .placeholder-image {
-  background: linear-gradient(135deg, #111827 0%, #1F2937 100%);
+  background: linear-gradient(135deg, #15181E 0%, #1F2329 100%);
   border-radius: 10px;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9CA3AF;
+  color: #8B919B;
   font-size: 1.2rem;
 }
 
 /* Mission & Vision */
 .mission-vision {
-  background: #111827;
+  background: #15181E;
 }
 
 .mv-card {
-  background: #0B0F19;
-  border-left: 4px solid #6366F1;
+  background: #0B0D10;
+  border-left: 4px solid #D6FF00;
 }
 
 .mv-card h3 {
-  color: #6366F1;
+  color: #D6FF00;
   margin-bottom: 20px;
   font-size: 1.8rem;
+  text-shadow: 0 0 10px rgba(214, 255, 0, 0.2);
 }
 
 .mv-card p {
-  color: #9CA3AF;
+  color: #8B919B;
   line-height: 1.8;
 }
 

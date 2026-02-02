@@ -1,5 +1,6 @@
 .portfolio-page {
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .portfolio-intro {
@@ -13,41 +14,41 @@
 }
 
 .portfolio-card {
-  background: #111827;
+  background: #15181E;
   transition: all 0.3s ease;
 }
 
 .portfolio-header {
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 2px solid #1F2937;
+  border-bottom: 2px solid #1F2329;
 }
 
 .project-category {
   display: inline-block;
-  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-  color: white;
+  background: #D6FF00;
+  color: #0B0D10;
   padding: 5px 15px;
   border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
 .portfolio-card h3 {
   font-size: 1.6rem;
-  color: #E5E7EB;
+  color: #EDEDED;
   margin-bottom: 10px;
 }
 
 .project-client {
-  color: #22D3EE;
+  color: #D6FF00;
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 .project-description {
-  color: #9CA3AF;
+  color: #8B919B;
   line-height: 1.8;
   margin-bottom: 25px;
 }
@@ -59,7 +60,7 @@
 
 .project-technologies h4,
 .project-results h4 {
-  color: #E5E7EB;
+  color: #EDEDED;
   margin-bottom: 12px;
   font-size: 1.05rem;
 }
@@ -71,12 +72,13 @@
 }
 
 .tech-tag {
-  background: #1F2937;
-  color: #E5E7EB;
+  background: #1F2329;
+  color: #EDEDED;
   padding: 6px 14px;
   border-radius: 5px;
   font-size: 0.85rem;
   font-weight: 500;
+  border: 1px solid rgba(214, 255, 0, 0.2);
 }
 
 .project-results ul {
@@ -85,7 +87,7 @@
 }
 
 .project-results li {
-  color: #9CA3AF;
+  color: #8B919B;
   padding: 6px 0;
   padding-left: 25px;
   position: relative;
@@ -95,15 +97,15 @@
   content: '✓';
   position: absolute;
   left: 0;
-  color: #22D3EE;
+  color: #D6FF00;
   font-weight: bold;
   font-size: 1.1rem;
 }
 
 /* Portfolio Stats */
 .portfolio-stats {
-  background: linear-gradient(135deg, #111827 0%, #0B0F19 100%);
-  color: #E5E7EB;
+  background: linear-gradient(135deg, #15181E 0%, #0B0D10 100%);
+  color: #EDEDED;
 }
 
 .stats-grid {
@@ -116,35 +118,36 @@
 .stat-card {
   text-align: center;
   padding: 30px;
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(214, 255, 0, 0.05);
   border-radius: 10px;
   transition: all 0.3s ease;
+  border: 1px solid rgba(214, 255, 0, 0.1);
 }
 
 .stat-card:hover {
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(214, 255, 0, 0.1);
   transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(214, 255, 0, 0.2);
 }
 
 .stat-card h3 {
   font-size: 3rem;
-  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #D6FF00;
+  text-shadow: 0 0 20px rgba(214, 255, 0, 0.35);
   margin-bottom: 10px;
 }
 
 .stat-card p {
   font-size: 1.1rem;
-  color: #9CA3AF;
+  color: #8B919B;
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, #6366F1 0%, #4F46E5 100%);
-  color: #E5E7EB;
+  background: linear-gradient(135deg, #15181E 0%, #0B0D10 100%);
+  color: #EDEDED;
   padding: 80px 0;
+  border-top: 2px solid rgba(214, 255, 0, 0.2);
 }
 
 .cta-content {
