@@ -200,6 +200,7 @@ const ThreeScene = ({ sceneType, isVisible }) => {
         break;
 
       default:
+        // Default geometry
         const defaultGeometry = new THREE.SphereGeometry(1, 32, 32);
         const defaultMaterial = new THREE.MeshPhysicalMaterial({
           color: 0x00d4ff,
@@ -207,6 +208,7 @@ const ThreeScene = ({ sceneType, isVisible }) => {
           roughness: 0.2,
         });
         mainObject = new THREE.Mesh(defaultGeometry, defaultMaterial);
+        break;
     }
 
     scene.add(mainObject);
@@ -313,8 +315,11 @@ const ThreeScene = ({ sceneType, isVisible }) => {
 
     // Cleanup
     return () => {
+      const canvas = canvasRef.current;
       window.removeEventListener('resize', handleResize);
-      canvasRef.current?.removeEventListener('mousemove', onMouseMove);
+      if (canvas) {
+        canvas.removeEventListener('mousemove', onMouseMove);
+      }
       if (animationIdRef.current) {
         cancelAnimationFrame(animationIdRef.current);
       }
