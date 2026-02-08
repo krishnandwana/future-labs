@@ -48,7 +48,16 @@ function Footer() {
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/careers">Careers</Link></li>
               <li><Link to="/contact">Contact</Link></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Legal</h4>
+            <ul className="footer-links">
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service">Terms of Service</Link></li>
+              <li><Link to="/cookie-policy">Cookie Policy</Link></li>
+              <li><Link to="/refund-policy">Refund Policy</Link></li>
             </ul>
           </div>
 
@@ -73,6 +82,13 @@ function Footer() {
 
         <div className="footer-bottom">
           <p>&copy; {currentYear} Future Labs. All rights reserved.</p>
+          <div className="footer-bottom-links">
+            <Link to="/privacy-policy">Privacy</Link>
+            <span className="separator">•</span>
+            <Link to="/terms-of-service">Terms</Link>
+            <span className="separator">•</span>
+            <Link to="/cookie-policy">Cookies</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,0 +1,161 @@
+.cookie-policy-page {
+  min-height: 100vh;
+}
+
+.cookie-policy-page .page-hero {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  padding: 100px 20px 60px;
+  text-align: center;
+}
+
+.cookie-policy-page .page-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.cookie-policy-page .page-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.policy-content {
+  padding: 60px 20px;
+}
+
+.policy-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.policy-section {
+  margin-bottom: 40px;
+}
+
+.policy-section:last-child {
+  margin-bottom: 0;
+}
+
+.policy-section h2 {
+  color: #00f2fe;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.policy-section h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin: 25px 0 15px;
+  font-weight: 600;
+}
+
+.policy-section p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.policy-section ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+.policy-section ul li {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.policy-section ul li strong {
+  color: #333;
+}
+
+.contact-info {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info li {
+  padding: 8px 0;
+}
+
+/* Cookie Table Styles */
+.cookie-table {
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+.cookie-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #f8f9fa;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cookie-table thead {
+  background: #4facfe;
+  color: white;
+}
+
+.cookie-table th,
+.cookie-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.cookie-table th {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.cookie-table td {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cookie-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cookie-table tbody tr:hover {
+  background: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cookie-policy-page .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  .policy-inner {
+    padding: 25px 20px;
+  }
+
+  .policy-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .policy-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .cookie-table table {
+    font-size: 0.85rem;
+  }
+
+  .cookie-table th,
+  .cookie-table td {
+    padding: 10px;
+  }
+}

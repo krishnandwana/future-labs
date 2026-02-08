@@ -96,6 +96,32 @@
   padding-top: 20px;
   text-align: center;
   color: #8B919B;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  color: #8B919B;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-bottom-links a:hover {
+  color: #D6FF00;
+}
+
+.footer-bottom-links .separator {
+  color: #8B919B;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
@@ -106,5 +132,13 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom-links {
+    font-size: 0.85rem;
   }
 }
